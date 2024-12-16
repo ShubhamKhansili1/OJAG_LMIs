@@ -52,7 +52,8 @@ M(6,6) = -lambda_4;
 M=sdpvar(M); 
 
 % Solution of LMIs
-LMIs=[mu >=0,lambda_1>=0,lambda_2>=0, lambda_3>=0, lambda_4>=0, P>=0, N<=0, M<=0 ];
+LMIs=[mu >=0,lambda_1>=0,lambda_2>=0, lambda_3>=0, lambda_4>=0, p1>=0, p2>=0, p3>=0,...
+P>=0, N<=0, M<=0 ];
 options=sdpsettings('solver','sedumi','verbose',0);
 sol=optimize(LMIs,[],options); 
 
